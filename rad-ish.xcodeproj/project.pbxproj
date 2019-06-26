@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		18EE64B922C3F65D00B5D3A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64B822C3F65D00B5D3A4 /* AppDelegate.swift */; };
-		18EE64BB22C3F65D00B5D3A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64BA22C3F65D00B5D3A4 /* ViewController.swift */; };
 		18EE64BE22C3F65D00B5D3A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EE64BC22C3F65D00B5D3A4 /* Main.storyboard */; };
 		18EE64C122C3F65D00B5D3A4 /* rad_ish.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64BF22C3F65D00B5D3A4 /* rad_ish.xcdatamodeld */; };
 		18EE64C322C3F66000B5D3A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EE64C222C3F66000B5D3A4 /* Assets.xcassets */; };
 		18EE64C622C3F66000B5D3A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EE64C422C3F66000B5D3A4 /* LaunchScreen.storyboard */; };
 		18EE64D122C3F66100B5D3A4 /* rad_ishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64D022C3F66100B5D3A4 /* rad_ishTests.swift */; };
 		18EE64DC22C3F66100B5D3A4 /* rad_ishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64DB22C3F66100B5D3A4 /* rad_ishUITests.swift */; };
+		18EE64EA22C3F6A400B5D3A4 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64E922C3F6A400B5D3A4 /* ItemListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		18EE64B522C3F65D00B5D3A4 /* rad-ish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rad-ish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EE64B822C3F65D00B5D3A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18EE64BA22C3F65D00B5D3A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18EE64BD22C3F65D00B5D3A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18EE64C022C3F65D00B5D3A4 /* rad_ish.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = rad_ish.xcdatamodel; sourceTree = "<group>"; };
 		18EE64C222C3F66000B5D3A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		18EE64D722C3F66100B5D3A4 /* rad-ishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rad-ishUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EE64DB22C3F66100B5D3A4 /* rad_ishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rad_ishUITests.swift; sourceTree = "<group>"; };
 		18EE64DD22C3F66100B5D3A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EE64E922C3F6A400B5D3A4 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				18EE64B822C3F65D00B5D3A4 /* AppDelegate.swift */,
-				18EE64BA22C3F65D00B5D3A4 /* ViewController.swift */,
 				18EE64BC22C3F65D00B5D3A4 /* Main.storyboard */,
+				18EE64E922C3F6A400B5D3A4 /* ItemListViewController.swift */,
 				18EE64C222C3F66000B5D3A4 /* Assets.xcassets */,
 				18EE64C422C3F66000B5D3A4 /* LaunchScreen.storyboard */,
 				18EE64C722C3F66000B5D3A4 /* Info.plist */,
@@ -259,9 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18EE64BB22C3F65D00B5D3A4 /* ViewController.swift in Sources */,
 				18EE64B922C3F65D00B5D3A4 /* AppDelegate.swift in Sources */,
 				18EE64C122C3F65D00B5D3A4 /* rad_ish.xcdatamodeld in Sources */,
+				18EE64EA22C3F6A400B5D3A4 /* ItemListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
