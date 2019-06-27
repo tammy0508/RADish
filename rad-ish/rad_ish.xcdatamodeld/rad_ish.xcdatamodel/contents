@@ -5,6 +5,6 @@
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FoodData" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="FoodData" positionX="-36" positionY="-9" width="128" height="75"/>
     </elements>
 </model>

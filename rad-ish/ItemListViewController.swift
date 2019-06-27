@@ -8,19 +8,26 @@
 
 import UIKit
 
-class ItemListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var array = [""]
-
+class ItemListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = array[indexPath.row]
-        return cell!
+        return foods.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //refers to each row- allows to use attributes
+        let cell = UITableViewCell()
+        let foodCell = foods[indexPath.row]
+        // the information displayed on the cell
+        cell.textLabel?.text = "\(foodCell.name!):  \(foodCell.time!) days till expiration"
+        
+        return cell
+    }
+    
+    var array = ["1"]
+    
+    var foods = [FoodData]()
+    
+
     //allows reording of cells. Tells the computer we want the people to be able to reorder
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -33,7 +40,6 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         array.insert(item, at: destinationIndexPath.row)
         
     }
-    
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -54,7 +60,22 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        displayfoodItems()
+    }
+
+   
+
+    // allows to display data in core data
+    func displayfoodItems() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            if let coreDataFoodData = try? context.fetch(FoodData.fetchRequest()) as? [FoodData] {
+                foods = coreDataFoodData
+                myTableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,3 +86,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
 
     
 }
+
+
+    
+

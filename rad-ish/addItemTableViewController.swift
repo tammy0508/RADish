@@ -11,14 +11,12 @@ import UIKit
 class addItemTableViewController: UITableViewController {
 
     //array that holds core data accessible
-    var foods = [FoodData]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        displayfoodItems()
-    }
+
 
     // MARK: - Table view data source
 
@@ -27,32 +25,10 @@ class addItemTableViewController: UITableViewController {
 //        return 1
 //    }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return foods.count
-    }
+   
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //refers to each row- allows to use attributes
-         let cell = UITableViewCell()
-        let foodCell = foods[indexPath.row]
-        // the information displayed on the cell
-        cell.textLabel?.text = "\(foodCell.name!):  \(foodCell.time!) days till expiration"
-        
-        return cell
-    }
-    // display items in the core data class
-    func displayfoodItems() {
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+
             
-            if let coreDataFoodData = try? context.fetch(FoodData.fetchRequest()) as? [FoodData] {
-                foods = coreDataFoodData
-                tableView.reloadData()
-            }
-        }
-    }
-        
-        
         
         
         
