@@ -16,7 +16,6 @@
 		18EE64DC22C3F66100B5D3A4 /* rad_ishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64DB22C3F66100B5D3A4 /* rad_ishUITests.swift */; };
 		18EE64EA22C3F6A400B5D3A4 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64E922C3F6A400B5D3A4 /* ItemListViewController.swift */; };
 		18EE64EC22C5031600B5D3A4 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64EB22C5031600B5D3A4 /* settingsViewController.swift */; };
-		18EE64F022C5037800B5D3A4 /* addItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64EF22C5037800B5D3A4 /* addItemTableViewController.swift */; };
 		18EE64F222C503ED00B5D3A4 /* customizeButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE64F122C503ED00B5D3A4 /* customizeButtonsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		18EE64DD22C3F66100B5D3A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EE64E922C3F6A400B5D3A4 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		18EE64EB22C5031600B5D3A4 /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
-		18EE64EF22C5037800B5D3A4 /* addItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemTableViewController.swift; sourceTree = "<group>"; };
 		18EE64F122C503ED00B5D3A4 /* customizeButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customizeButtonsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +103,6 @@
 		18EE64B722C3F65D00B5D3A4 /* rad-ish */ = {
 			isa = PBXGroup;
 			children = (
-				18EE64EF22C5037800B5D3A4 /* addItemTableViewController.swift */,
 				18EE64B822C3F65D00B5D3A4 /* AppDelegate.swift */,
 				18EE64BC22C3F65D00B5D3A4 /* Main.storyboard */,
 				18EE64F122C503ED00B5D3A4 /* customizeButtonsViewController.swift */,
@@ -272,7 +269,6 @@
 				18EE64C122C3F65D00B5D3A4 /* rad_ish.xcdatamodeld in Sources */,
 				18EE64F222C503ED00B5D3A4 /* customizeButtonsViewController.swift in Sources */,
 				18EE64EA22C3F6A400B5D3A4 /* ItemListViewController.swift in Sources */,
-				18EE64F022C5037800B5D3A4 /* addItemTableViewController.swift in Sources */,
 				18EE64EC22C5031600B5D3A4 /* settingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,9 @@
 import UIKit
 
 class ItemListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    var foods = [FoodData]()
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
     }
@@ -22,11 +25,6 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
-    
-    var array = ["1"]
-    
-    var foods = [FoodData]()
-    
 
     //allows reording of cells. Tells the computer we want the people to be able to reorder
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -35,9 +33,9 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     
     //lets the user rearrange the cells
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let item = array[sourceIndexPath.row]
-        array.remove(at: sourceIndexPath.row)
-        array.insert(item, at: destinationIndexPath.row)
+        let item = foods[sourceIndexPath.row]
+        foods.remove(at: sourceIndexPath.row)
+        foods.insert(item, at: destinationIndexPath.row)
         
     }
     

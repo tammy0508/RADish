@@ -7,19 +7,45 @@
 //
 
 import UIKit
+import UserNotifications
 
 class customizeButtonsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    var foods = [FoodData]()
     
+    
+        // Do any additional setup after loading the view.
+    
+    
+
     @IBOutlet weak var foodName: UITextField!
     
     @IBOutlet weak var expirationTime: UITextField!
     
+    
+    
+    @IBAction func notification(_ sender: UIButton) {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Your food is about to being expired"
+        content.subtitle = "Use your food now!"
+        content.body = "Open the app to see your items!"
+        content.badge = 1
+        
+        
+        let trigger = UNTimeIntervalNotificationTrigger( timeInterval: 60.0, repeats: true )
+        let request = UNNotificationRequest( identifier: "timerDoner", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert ,.sound,.badge ], completionHandler: {didAllow, error in})
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     // if button is pressed it will save the information in the core data
     @IBAction func saveNewFood(_ sender: UIButton) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
@@ -33,9 +59,13 @@ class customizeButtonsViewController: UIViewController {
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             
             navigationController?.popViewController(animated: true)
-            
         }
+        
+        
     }
+
+
+}
     
     
     
@@ -54,4 +84,4 @@ class customizeButtonsViewController: UIViewController {
     }
     */
 
-}
+
